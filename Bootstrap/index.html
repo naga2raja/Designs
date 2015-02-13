@@ -1,0 +1,184 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>QSearch using Bootstrap</title>
+        <meta name="generator" content="Bootstrap" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/theme.css" rel="stylesheet">
+        <script type='text/javascript' src="js/jquery.min.js"></script>
+        <script type='text/javascript' src="js/bootstrap.min.js"></script>
+        <script type='text/javascript' src="js/script.js"></script>
+    </head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Qsearch using Bootstrap</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav" id="navig-bar">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login_page.html">Login</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+<div class="container">
+  <div class="text-center">   
+    <br><br>
+    <img src="images/logo.png" class="img-responsive center-block">
+    <br>
+    <div class="row center-block">
+      <div class="col-md-6 col-md-offset-2 search-box">
+        <input class="form-control input-lg" placeholder="Enter Text to Search" id="search_text" type="text">
+      </div>
+      <div class="col-md-1"><button class="btn btn-primary search-box" id="btn-search" onclick="DisplayResults();">Search</button></div>
+      <div class="col-md-3"></div>
+    </div>
+    </div> <!-- Text Center -->
+    <br>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3">
+      <input id="adv_controls" class="checkbox pull-left adjust-checkbox" onclick="ShowAdvControls();" type="checkbox"> <p class="text-info">Show Advanced Controls</p> 
+    </div>
+    <div class="col-md-3">
+		<a href="analytical_search.html"> Need an Analytical Search? Click Here !!
+		</a>
+	</div>
+  </div>
+  
+  
+  <div class="container">
+    <!-- Advanced Controlls -->
+    <div class="row" id="advanced-controls-row">
+      <div class="col-md-4 advanced-controls">
+        <p class="text-left"><b>Search by Time:</b></p>
+        <select class="form-control">
+          <option>Any time</option>
+          <option>Last 24 hours</option>
+          <option>Last Week</option>
+          <option>Last Month</option>
+          <option>Last Year</option>
+        </select>
+       </div>
+       <div class="col-md-4 advanced-controls">
+         <p class="text-left"><b>Language:</b></p>
+       	 <select class="form-control">
+          <option>Any Language</option>
+          <option>Japanese</option>
+          <option>English</option>
+          <option>Tamil</option>
+          <option>Hindi</option>
+        </select>
+       </div>
+       <div class="col-md-4 advanced-controls">
+         <p class="text-left"><b>Region:</b></p>
+          <select class="form-control">
+            <option>Africa</option>
+            <option>Asia</option>
+            <option>Central America</option>
+            <option>Europe</option>
+            <option>North America</option>
+            <option>Scandinavia</option>
+         </select>
+       </div>
+     </div> 
+     <!-- End of Advanced Controls -->
+     <br>
+     <div class="row" id="result-row"> <!-- Result rows container -->
+     <p class="text-warning">Showing 1 - 5 of 1500 results</p>
+      
+       <div class="row">
+         <div class="col-md-2 search-image results-row">
+           <a href="http://en.wikipedia.org/wiki/Apple"></a>
+           <img src="images/apple1.png" class="img-thumbnail">
+         </div>
+         <div class="col-md-8 results-row">
+           <span class="title"><a href="http://en.wikipedia.org/wiki/Apple"><b>Apple</b> - Wikipedia, the free encyclopedia</a></span>
+           <br><span class="snippet">The <b>apple</b> is the pomaceous fruit of the <b>apple</b> tree, Malus domestica of the rose family (Rosaceae). It is one of the most widely cultivated tree fruits, and the most ...</span>
+           <br><button class="btn btn-link url">en.wikipedia.org/wiki/<b>Apple</b></button>
+           <a href="#" data-toggle="tooltip" title="en.wikipedia.org/wiki/Apple">More results from this host</a>
+         </div>
+      </div>
+
+       <div class="row result-item">
+         <div class="col-md-2 search-image results-row">
+           <a href="http://en.wikipedia.org/wiki/Apple"></a>
+           <img src="images/apple2.png" class="img-thumbnail">
+         </div>
+         <div class="col-md-8 results-row">
+           <span class="title"><a href="http://en.wikipedia.org/wiki/Apple"><b>Apple</b>  - The World's Healthiest Foods</a></span>
+           <br><span class="snippet">What's New and Beneficial About <b>Apples</b>. The phytonutrients in <b>apples</b> can help you regulate your blood sugar. Recent research has shown that <b>apple</b> polyphenols can help ...</span>
+           <br><button class="btn btn-link url">en.wikipedia.org/wiki/<b>Apple</b></button>
+           <a href="#" data-toggle="tooltip" title="en.wikipedia.org/wiki/Apple">More results from this host</a>
+         </div>
+      </div>
+
+       <div class="row result-item">
+         <div class="col-md-2 search-image results-row">
+           <a href="http://en.wikipedia.org/wiki/Apple"></a>
+           <img src="images/apple3.png" class="img-thumbnail">
+         </div>
+         <div class="col-md-8 results-row">
+           <span class="title"><a href="http://en.wikipedia.org/wiki/Apple"><b>Apple</b> varieties - <b>Apples</b> and orchards, plums, cherries ...</a></span>
+           <br><span class="snippet">For <b>apple</b> and orchard fruit enthusiasts - tasting notes, fruit identification, flavors, and relationships of hundreds of <b>apple</b> varieties</span>
+           <br><button class="btn btn-link url">www.orangepippin.com/<b>apples</b></button>
+           <a href="#" data-toggle="tooltip" title="orangepippin.com">More results from this host</a>
+         </div>
+      </div>
+
+       <div class="row result-item">
+         <div class="col-md-2 search-image results-row">
+           <a href="http://en.wikipedia.org/wiki/Apple"></a>
+           <img src="images/apple4.png" class="img-thumbnail">
+         </div>
+         <div class="col-md-8 results-row">
+           <span class="title"><a href="http://en.wikipedia.org/wiki/Apple"><b>Apples</b> | Organic Authority</a></span>
+           <br><span class="snippet">The <b>apple</b> is the pomaceous fruit of the <b>apple</b> tree, Malus domestica of the rose family (Rosaceae). It is one of the most widely cultivated tree fruits, and the most ...</span>
+           <br><button class="btn btn-link url">www.organicauthority.com/fruits/<b>apples</b>.html</button>
+           <a href="#" data-toggle="tooltip" title="organicauthority.com">More results from this host</a>
+         </div>
+      </div>
+
+       <div class="row result-item">
+         <div class="col-md-2 search-image results-row">
+           <a href="http://en.wikipedia.org/wiki/Apple"></a>
+           <img src="images/thumb.jpeg" class="img-thumbnail">
+         </div>
+         <div class="col-md-8 results-row">
+           <span class="title"><a href="http://en.wikipedia.org/wiki/Apple"><b>Apples</b>, <b>Apples</b>, <b>Apples</b>: Nancy Elizabeth Wallace ...</a></span>
+           <br><span class="snippet"><b>Apples</b>, <b>Apples</b>, <b>Apples</b> [Nancy Elizabeth Wallace] on Amazon.com. *FREE* shipping on qualifying offers. It’s a blue sky autumn day and Minna, Pop, Mom, and Dad have ...</span>
+           <br><button class="btn btn-link url">www.amazon.com/<b>Apples</b>-Nancy-Elizabeth-Wallace/dp/0761451811</button>
+           <a href="#" data-toggle="tooltip" title="amazon.com">More results from this host</a>
+         </div>
+      </div>
+      <div class="row result-item">
+      <br>
+      <div class="col-md-4 col-md-offset-8">
+        <div class="btn-toolbar">
+          <div class="btn-group">
+            <button class="btn btn-default">1</button>
+            <button class="btn btn-default">2</button>
+            <button class="btn btn-default">3</button>
+            <button class="btn btn-default">4</button>
+            <button class="btn btn-default">5</button>
+            <button class="btn btn-default">&gt;&gt;</button>
+          </div>
+        </div>
+        </div>
+       </div>
+    </div> <!-- Results Row Container -->
+  </div> <!-- Container for advanced controls and results -->  
+</div><!-- Main Container -->
+</body>
+</html>

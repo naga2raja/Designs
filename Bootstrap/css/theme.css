@@ -1,0 +1,376 @@
+body {
+  padding-top: 50px;
+}
+
+#btn-search {
+        height : 46px;
+}
+
+.search-box {
+    margin-top: 10px;
+}
+
+.advanced-controls {
+     margin-top: 10px; 
+}
+ 
+.search-image {
+        margin-left: 30px;
+ }
+ 
+.results-row {
+     margin-top: 10px; 
+ }
+
+.url {
+        color: #5BA110;
+}
+      
+.result-item {
+          border-top: 1px dashed #DADADA;
+          margin-top : 10px;
+}
+
+.adjust-checkbox {
+          margin-right : 6px !important;
+          margin-top : 0px !important;
+}
+          
+#advanced-controls-row {
+              display : none;
+}
+          
+#result-row {
+            display:none;
+}
+ 
+#navig-bar > li.active > a, #navig-bar > li.active > a:hover, #navig-bar > li.active > a:focus {
+    background-color: #428BCA;
+    color: #FFFFFF;
+}
+
+#navig-bar > li > a {
+    border-radius: 4px;
+}
+
+#navig-bar > li > a:hover {
+   background-color: #FFFFFF;
+    color:  #428BCA;
+}
+
+.user-page-title {
+   margin-left : 10%;
+   margin-top : 10%;
+}
+
+/* Login Page CSS */
+
+#login-body {
+  padding-top: 50px;
+ /* background-color:#28B7ED; */
+  background-color: #EEEEEE;
+}
+ 
+ 
+.user-block {
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+  	background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 54px;
+}
+  
+.top-margin {
+    margin-top: 10px;
+  }
+
+.btn-width {
+      width: 100%;
+}
+
+/* Registration Page CSS */
+#reg-body {
+  padding-top: 50px;
+  /*background-color:#D7F0A2; */
+  background-color:#EEEEEE	;
+}
+
+.user-block-rg {
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+  	background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+}
+
+/* User Dashboard CSS */
+
+.user-block-db {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px black;
+    padding : 20px;
+    margin : 10px;
+}
+
+.upload-block {
+    padding-left:30px;
+}
+
+.add-button {
+	 margin-bottom: 10px;
+    margin-right: 17px;
+    margin-top: 17px;
+    width: 75px;
+}
+
+.export-btn {
+ margin-left : 20px;
+ }
+ 
+/* File Properties page CSS */
+
+label {
+	font-weight : normal !important;
+}
+
+/* Process Completed */
+
+.tick-mark {
+  height : 60px;
+}
+
+.pg_bar {
+    margin-right : 5%;
+}
+
+.continue-btn {
+      margin-top : 12%;
+}
+
+/* File Export Page */
+.right_arrow {
+    height : 35px;
+  }
+
+.top-margin-1 {
+    margin-top : 20px;
+}
+
+/*Analytical Search Screen */
+
+.language-block {
+    margin-left : 2px;
+    margin-right : 2px;
+  }
+/* Analytical Result Screen */
+
+.top-search {
+  margin-top : 20px;
+overflow:hidden;
+}
+.lefo	{
+ padding-left:35px;
+float:right;
+}
+
+
+.language-block-1 {
+    margin-left : 2px;
+    margin-right : 2px;
+  }
+
+#btn-search-1 {
+        height : 33px;
+}
+
+.left-search-block {
+  margin-top: 18px;
+}
+
+.test-results {
+    background-color: #f1f1f1;
+     border-radius: 8px 8px 8px 8px;
+    padding : 20px;
+    margin : 10px;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+    transition: all 0.2s ease-in-out 0s;
+    
+}
+
+.ui-widget-header {
+	background: #cedc98;
+	border: 1px solid #DDDDDD;
+	color: #333333;
+	font-weight: bold;
+}
+.progress-label {
+	position: absolute;
+	left: 588px;
+	top: 167px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #fff;
+}  
+
+#progressbar-5 {
+	margin-right : 15px;
+}
+
+/*Analytical Search CSS*/
+
+.top-summary {
+    margin-top : 24px;
+}
+  
+/* Analytical Report CSS */
+
+.block-title {
+  font-weight : 500;
+  margin-bottom : 10px !important;
+  color:#32BDE2
+  }
+
+.active_1 {
+    color : black !important;
+    text-decoration : none;
+      font-weight : bold;
+  }
+  
+hr.block-hr {
+      margin-top : 0 !important;
+      margin-bottom : 0 !important;
+}
+
+.odd-tr {
+    background-color : #eeeeff;
+  }
+  
+.bold-td {
+  font-weight : bold;
+    }
+    
+  
+.visitors {
+      background: url(http://localhost/images/anal_sprite.png) -304px -16px;
+    width: 25px;
+	height: 24px;
+}
+    
+.actions {
+    background: url(http://localhost/images/anal_sprite.png) -114px -111px;
+    width: 25px;
+    height: 24px;
+ }   
+
+ .average {
+    background: url(http://localhost/images/anal_sprite.png) -17px -144px;
+    width: 25px;
+    height: 24px;
+ }   
+ .rite	{
+    float:right;
+}
+.heed	{
+	background:#E2E2E2;
+        border-bottom: 1px solid #C4C4C4;
+	
+}
+.ttl_spent {
+    background: url(http://localhost/images/anal_sprite.png) -145px -48px;
+    width: 25px;
+	height: 24px;
+ }
+
+.bounce {
+    background: url(http://localhost/images/anal_sprite.png) -240px -15px;
+    width: 25px;
+	height: 24px;
+ }  
+
+.revenue {
+    background: url(http://localhost/images/anal_sprite.png) -80px -79px;
+    width: 25px;
+	height: 24px;
+ }  
+
+.goals {
+    background: url(http://localhost/images/anal_sprite.png) -144px -142px;
+    width: 25px;
+	height: 24px;
+}  
+
+.subscribers {
+    background: url(http://localhost/images/anal_sprite.png) -144px -111px;
+    width: 25px;
+    height: 24px;
+ }  
+
+.navbar-close{
+ 	 background:#121214;;
+    border-top: 4px solid #1F1F1F;
+}
+.navbar-nav li a	{
+	cursor:pointer;
+}
+
+.closse	{
+	float:right; cursor:pointer;
+}
+
+.heigh	{
+	height:400px;
+}
+
+.registration {
+    background: url(http://localhost/images/anal_sprite.png) -272px -15px;
+    width: 25px;
+	height: 24px;
+ }  
+
+  .compare {
+    background: url(http://localhost/images/anal_sprite.png) -112px -78px;
+    width: 25px;
+	height: 24px;
+ } 
+
+ .arrow-right {
+    background: url(http://localhost/images/anal_sprite.png) -305px -111px;
+    width: 25px;
+	height: 24px;
+    float : right;
+ } 
+
+.rise-up {
+  color : green;
+  }
+ 
+.rise-down {
+  color : red;
+    }
+    
+ .shade-out {
+      color : gray;
+    }
+
+.mar-left {
+    margin-left : 33px;
+  }
+
+.prgress {
+    width : 75px;
+  }
+
+.img-visitors {
+    width : 100%;
+    
+  }
+
+.mar-top {
+    margin-top : 20px;
+  }
+  

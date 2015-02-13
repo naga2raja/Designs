@@ -1,0 +1,234 @@
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>User Dashboard - Qsearch</title>
+<meta name="generator" content="Bootstrap" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/theme.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
+<script type='text/javascript' src="js/bootstrap.min.js"></script>
+<script type='text/javascript' src="js/Chart.js"></script>
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){$('.draggy').draggable({ containment: "window" }); });
+$(document).ready(function(){$( '.resizeDiv' ).resizable({
+maxHeight: 1000,
+maxWidth: 500,
+minHeight: 400,
+minWidth: 200
+});
+});
+
+$(document).ready(function(){
+    $("#hide-pie").click(function(){
+        $(".pie").hide();
+    });
+    $("#show-pie").click(function(){
+        $(".pie").show();
+    });
+$("#hide-bar").click(function(){
+        $(".bar").hide();
+    });
+    $("#show-bar").click(function(){
+        $(".bar").show();
+    });
+$("#hide-t1").click(function(){
+        $(".t1").hide();
+    });
+    $("#show-t1").click(function(){
+        $(".t1").show();
+    });
+$("#hide-t2").click(function(){
+        $(".t2").hide();
+    });
+    $("#show-t2").click(function(){
+        $(".t2").show();
+    });
+});
+ </script>
+</head>
+<body>
+<div class="navbar navbar-close navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <b><a class="navbar-brand" href="#">Analytical Report</a></b>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav rite" id="navig-bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login_page.html">Login</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+  <div class="container heed">
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav" id="navig-bar">
+        <li><a id="show-pie">Pie Chart </a></li>
+        <li><a id="show-bar">Bar Chart </a></li>
+        <li><a id="show-t1">Table 1</a></li>
+        <li><a id="show-t2">Table 2</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+<div class="container" id="sortable">
+   <div class="row"> <!-- Main Row -->
+<div class="col-md-6 draggy " >
+      <div class="row pie mar-top  test-results "> <!-- Basics Row -->
+     <p class="lead block-title">Total sales values for each sales man<b class="lead block-title lefo">&#8634;</b> <b class="lead block-title closse" id="hide-pie">&times;</b></p>
+     <hr class="block-hr ">
+      <div class="row">
+        <div class="col-md-12 mar-top">
+	<!-- pie chart canvas element -->
+	<canvas id="countries" width="500" height="400" class="resizeDiv"></canvas>
+        </div>
+      </div>
+      </div>
+      </div> <!-- Basics Row -->
+<div class="col-md-6  draggy" >
+ <div class="row  bar mar-top test-results"> <!-- Basics Row -->
+<p class="lead block-title">Total sales per month <b class="lead block-title lefo">&#8634;</b> <b class="lead block-title closse" id="hide-bar">&times;</b></p>
+     <hr class="block-hr ">
+      <div class="row">
+        <div class="col-md-12 mar-top">
+	<!-- bar chart canvas element -->
+	<canvas id="income" width="500" height="400" class="resizeDiv"></canvas>
+        </div>
+       </div>
+    </div><!-- Visitors Row -->
+</div>
+ </div>
+ <div class="row"> <!-- Main Row -->
+     <div class=" col-md-6 mar-top t1 heigh"> <!-- Goals Row -->
+     <div class="row"> <!-- Heading Row -->
+      <div class=" test-results resizeDiv draggy ui-widget-content"><p class="lead block-title">Top 5 sales orders in amount<b class="lead block-title lefo">&#8634;</b>  <b class="lead block-title closse" id="hide-t1">&times;</b></p>
+     <hr class="block-hr">
+         <table class="table table-hover top-search ">
+		  <tbody>
+		<tr><th>order Number</th><th>User Name</th><th>Value</th><th>Quantity</th></tr>
+            <tr class="odd-tr"><td>A000</td><td class="bold-td">Oswaldo</td><td>504.74</td><td class="rise-up">3.0</td></tr>
+            <tr><td>A001</td><td class="bold-td">Mao</td><td>529.17</td><td class="rise-up">6.0</td></tr>
+	    <tr class="odd-tr"><td>A002</td><td class="bold-td">Angeline</td><td>553.6</td><td class="rise-up">9.0</td></tr>
+            <tr><td>A003</td><td class="bold-td">Gerardo</td><td>578.03</td><td class="rise-up">12.0</td></tr>
+            <tr class="odd-tr"><td>A004</td><td class="bold-td">Nicki</td><td>502.46</td><td class="rise-up">15.0</td></tr>
+           </tbody>
+		 </table>
+	</div>
+	</div>
+    </div><!-- Goals Row -->
+  <div class="col-md-6 mar-top t2 heigh"> <!-- Content Row -->
+      <div class="row"> <!-- Heading Row -->
+      <div class=" test-results resizeDiv draggy ui-widget-content"><p class="lead block-title">Top 5 sales men in last 3 months<b class="lead block-title lefo">&#8634;</b>  <b class="lead block-title closse" id="hide-t2">&times;</b></p>
+     <hr class="block-hr">
+         <table class="table table-hover top-search ">
+		  <tbody>
+		<tr><th>Name</th><th>Value</th></tr>
+            <tr class="odd-tr"><td class="bold-td">Oswaldo</td><td>31673</td></tr>
+            <tr><td class="bold-td">Mao</td><td>30004</td></tr>
+	    <tr class="odd-tr"><td class="bold-td">Angeline</td><td>29216</td></tr>
+            <tr><td class="bold-td">Gerardo</td><td>2836</td></tr>
+            <tr class="odd-tr"><td class="bold-td">Nicki</td><td>27797</td></tr>
+           </tbody>
+		 </table>
+	</div>
+	</div>
+   </div> <!-- Contents Row -->
+  </div> <!-- Side Row -->
+ </div> <!-- Main Row -->
+</div><!-- Main Container -->
+<div class="mar-top navbar-close">
+  <div class="container">
+    <div class="collapse navbar-collapse">
+     <h5> <a>Copyrights 2015 &copy; Terms and Conditions applied.</a> </h5>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+<script>
+
+	
+	// pie chart data
+	var pieData = [
+				{
+					value: 33702,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Oswaldo"
+				},
+				{
+					value: 32811,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Mao"
+				},
+				{
+					value: 12342,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Angeline"
+				},
+				{
+					value: 1529,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Gerardo"
+				},
+				{
+					value: 51954,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Nicki"
+				},
+				{
+					value: 44697,
+					color: "#800080",
+					highlight: "#8B008B",
+					label: "Test"
+				}
+
+			];
+
+	// pie chart options
+	var pieOptions = {
+		segmentShowStroke : false,
+		animateScale : true
+	}
+	
+	// get pie chart canvas
+	var countries= document.getElementById("countries").getContext("2d");
+	
+	// draw pie chart
+	new Chart(countries).Pie(pieData, pieOptions);
+	
+	// bar chart data
+	var barData = {
+	labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+	datasets : [
+		{
+			fillColor : "#48A497",
+			strokeColor : "#48A4D1",
+			data : [1019008,1382276,1213444,1477716,1359516,1324580,882815,855706,1360647,1272367,1462971,1026893]
+		}
+		]
+	}
+	
+	
+
+	// get bar chart canvas
+	var income = document.getElementById("income").getContext("2d");
+	
+	// draw bar chart
+	new Chart(income).Bar(barData);
+
+</script>
+</body>
+</html>
