@@ -1,0 +1,136 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <!-- Header -->
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Sales Management Web Application</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+		 <li><a class="lefo1">Welcome: {{username}} !!!</a></li>
+        <li><a href="" ng-click="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-default"> <!-- Menu for charts list -->
+  <div class="container">
+	      <ul class="nav navbar-nav" id="navig-bar">
+        <li><a id="show-pie" ng-click="showme1=false">Total Sales Per Sales Man </a></li>
+        <li><a id="show-bar" ng-click="showme2=false">Total Sales Per Month</a></li>
+        <li><a id="show-t1" ng-click="showme3=false">Top 5 Sales Order</a></li>
+        <li><a id="show-t2" ng-click="showme4=false">Top 5 Sales Man</a></li>
+      </ul>
+
+  </div>
+</nav>
+
+
+<!-- Resizable Function -->
+<script>
+$(function() {
+ $( ".resizable" ).resizable();
+});
+</script>
+
+<div class="container">
+   <div class="row"> <!-- Main Row -->
+	   	<div class="col-md-5" ng-hide="showme1" ng-show="showme1"  >
+		<div class="col-md-12 test-results resizable" > <!-- Total Sales Pie Chart -->
+			<p class="lead block-title">Total Sales Per Sales Man <span class="closse" ng-click="showme1=true" id="hide-pie">&#x2717;</span><span class="lefo" ng-click="reload_pie_chart()">&#8634;</span></p>
+			<hr class="block-hr ">
+			<div class="row">
+				<div  class="col-md-12 mar-top drag-index " draggable> 
+					<!-- pie chart canvas element -->
+					<nvd3-pie-chart
+						data="exampleData3"
+						id="exampleId"
+						margin="{left:0,top:0,bottom:0,right:0}"
+						x="xFunction()"
+						y="yFunction()"
+						width="450"
+						height="450"
+						showLabels="true"
+						pieLabelsOutside="false"
+						showValues="true"
+						showLegend="true"
+						labelType="percent"
+						tooltips="true"
+						 >
+						<svg height=""></svg>
+					</nvd3-pie-chart>
+				</div>
+			</div>
+		</div>
+	</div> <!-- Total Sales Pie Chart -->
+	<div class="col-md-7" ng-hide="showme2" ng-show="showme2"   >
+		<div class="col-md-12 test-results resizable" > <!-- Total Sales per Month Bar Chart -->
+			<p class="lead block-title">Total Sales Per Month <span class="closse" id="hide-bar" ng-click="showme2=true">&#x2717;</span><span class="lefo" ng-click="reload_bar_chart()">&#8634;</span></p>
+			<hr class="block-hr ">
+			<div class="row">
+				<div class="col-md-12 mar-top " draggable>
+					 <!-- bar chart canvas element -->
+					<nvd3-multi-bar-chart
+							data="exampleBarData"
+							id="exampleId1"
+							width="550"
+							height="370"
+							x="xbFunction()"
+							y="ybFunction()"
+							showXAxis="true"
+							showYAxis="true"
+							forcey="[0]"
+							stacked="true"
+							margin="{left:78}"
+							interactive="true"
+							tooltips="true"
+							tooltipcontent="toolTipContentFunction()"
+						   >
+						<svg height=""></svg>
+					</nvd3-multi-bar-chart>
+				</div>
+			</div>
+		</div><!-- Total Sales per Mont Bar Chart-->
+	</div>
+ </div>
+ <div class="row"> <!-- Top 5 Sales Order-->
+	<div class=" col-md-6 mar-top t1 heigh" ng-hide="showme3" ng-show="showme3"  draggable> <!-- Goals Row -->
+		<div class="row"> <!-- Heading Row -->
+			<div class=" test-results resizeDiv draggy ui-widget-content"><p class="lead block-title">Top 5 Sales Order <span class="closse" id="hide-t1" ng-click="showme3=true">&#x2717;</span><span class="lead block-title lefo" ng-click="reload_topsales()">&#8634;</span></p>
+			<hr class="block-hr">
+			<table class="table table-hover top-search ">
+			<tbody>
+				<tr class="odd-tr">
+					<th>order Number</th><th>User Name</th><th>Value</th><th>Quantity</th>
+				</tr>
+				<tr ng-repeat="item in topsalesorders.data">
+					<td ng-repeat="(key, val) in item">{{val}}</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+ </div><!-- Top 5 Sales Order -->
+ <div class="col-md-6 mar-top t2 heigh" ng-hide="showme4" ng-show="showme4"  draggable> <!-- Top 5 Sales Man -->
+	 <div class="row"> <!-- Heading Row -->
+		<div class=" test-results resizeDiv draggy ui-widget-content"><p class="lead block-title">Top 5 Sales Man <span class="lead block-title closse" id="hide-t1" ng-click="showme4=true">&#x2717;</span><span class="lefo" ng-click="reload_topsalesman()">&#8634;</span> </p>
+			<hr class="block-hr">
+			<table class="table table-hover top-search ">
+			<tbody>
+				<tr class="odd-tr"><th>Name</th><th>Value</th></tr>
+				<tr ng-repeat="item in topsalesmen.data">
+					 <td ng-repeat="(key, val) in item">{{val}}</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	  </div>
+	</div> 
+   </div>
+ <div class="bottom-space"></div>
+ </div> <!-- Main Row -->
+</div><!-- Main Container -->
+<div footer-directive>Call Footer Here</div>
