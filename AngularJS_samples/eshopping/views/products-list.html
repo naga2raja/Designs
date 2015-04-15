@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-4 product-box" ng-hide="StreCtrl.error" ng-repeat="product in products">
+	<img class="img-product thumbnail" ng-show="product.images.length" ng-src={{product.images[0]}}  />
+	  <h3><a href="#/product/{{$index}}" ng-click="StreCtrl.showProduct(product)">{{product.name}} </a></h3>
+      <p>{{product.price | currency}}</p>
+      <p>{{product.description}}</p>  
+    </div>
+    
+</div>
