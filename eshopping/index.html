@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="mystore">
+<head>
+<title> Simple Shopping Website using Angular JS</title>
+<base href="/eshopping/index.html" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/directives.js"></script>
+</head>
+<body>
+ <div class="container">
+  <header>
+    <h1>My Mobile Store</h1>
+  </header>
+  <hr class="header-seperator">
+  <nav class="navbar navbar-default">
+	<div class="container-fluid">
+	 <div class="navbar-header">
+		<a class="navbar-brand" href="#">My Mobile Store</a>
+    </div>
+	<div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Mobiles</a></li>
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Fashions</a></li>
+        <li><a href="#">Footwears</a></li>
+      </ul>
+      </div>
+  </div>
+  </nav>
+  <div ng-view>
+  </div>
+</div>
+</body>
+</html>
